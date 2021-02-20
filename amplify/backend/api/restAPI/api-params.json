@@ -1,0 +1,45 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "getOneQuestion",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ],
+                "unauth": [
+                    "/GET"
+                ]
+            },
+            "policyResourceName": "/items"
+        }
+    ],
+    "resourceName": "restAPI",
+    "apiName": "restAPI",
+    "functionArns": [
+        {
+            "lambdaFunction": "getOneQuestion"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "amplify-amplifye32ec456717a4-staging-160424-authRole",
+        "unAuthRoleName": "amplify-amplifye32ec456717a4-staging-160424-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "getOneQuestion",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

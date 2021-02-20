@@ -1,0 +1,7 @@
+{
+    "tableName": "Questions",
+    "partitionKeyName": "number",
+    "partitionKeyType": "N",
+    "sortKeyName": "question",
+    "sortKeyType": "S"
+}
